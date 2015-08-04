@@ -13,7 +13,7 @@ CREATE TABLE properties (
 	owner_id INTEGER REFERENCES owners
 );
 
-<!-- Basic Challenges -->
+#Basic Challenges
 
 1. Show all the psql users. (**Hint:** Look for a command to show `roles`): `\dg[+] [PATTERN]`
 2. Show all the tables in your `apartmentlab` database: `\dt`
@@ -40,7 +40,7 @@ CREATE TABLE properties (
 23. Use an `INNER JOIN` to show all of the owners with associated properties: `SELECT * FROM owners INNER JOIN properties ON owners.id = properties.owner_id;` or `SELECT owners.name, properties.name FROM owners INNER JOIN properties ON owners.id = properties.owner_id;`
 24. Use a `CROSS JOIN` to show all possible combinations of owners and properties: `SELECT * FROM owners CROSS JOIN properties WHERE owners.id = 1;`
 
-<!-- Stretch Challenges -->
+#Stretch Challenges
 
 1. In the properties table, change the name of the column name to property_name: `ALTER TABLE properties RENAME COLUMN name TO property_name;`
 2. Count the total number of properties where the owner_id is between 1 and 3: `SELECT COUNT(*) FROM properties WHERE owner_id BETWEEN 1 AND 3;`
