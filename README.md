@@ -1,17 +1,8 @@
 #README
 
-CREATE TABLE owners (
-	id SERIAL primary key,
-	name VARCHAR(255),
-	age INTEGER
-);
+`CREATE TABLE owners (id SERIAL primary key, name VARCHAR(255), age INTEGER);`
 
-CREATE TABLE properties (
-	id SERIAL primary key,
-	name VARCHAR(255),
-	num_units INTEGER,
-	owner_id INTEGER REFERENCES owners
-);
+`CREATE TABLE properties (id SERIAL primary key, name VARCHAR(255), num_units INTEGER, owner_id INTEGER REFERENCES owners);`
 
 #Basic Challenges
 
